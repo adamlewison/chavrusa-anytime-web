@@ -1,102 +1,267 @@
-import Image from "next/image";
+import React from "react";
 
-export default function Home() {
+export default function TestPage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200">
+      {/* Header */}
+      <header className="bg-white shadow-md p-6">
+        <div className="container mx-auto">
+          <div className="flex items-center justify-between">
+            {/* App Logo */}
+            <div className="flex items-baseline">
+              <span className="text-3xl font-extrabold text-[#FA7D00] tracking-tight">
+                Chavrusa
+              </span>
+              <span className="text-3xl font-semibold text-[#1972E6] tracking-tight">
+                Anytime
+              </span>
+            </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            {/* Test Badge */}
+            <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+              Style Test
+            </div>
+          </div>
         </div>
+      </header>
+
+      {/* Main Content */}
+      <main className="container mx-auto p-6 space-y-8">
+        {/* Typography Test */}
+        <section className="card space-y-4">
+          <h2 className="text-2xl font-bold text-gray-800">Typography Test</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 className="text-xl font-semibold mb-3">English Text</h3>
+              <h1 className="text-4xl font-extrabold mb-2">Heading 1</h1>
+              <h2 className="text-3xl font-bold mb-2">Heading 2</h2>
+              <h3 className="text-2xl font-semibold mb-2">Heading 3</h3>
+              <p className="text-base text-gray-700">
+                This is a paragraph with regular text. Lorem ipsum dolor sit
+                amet consectetur adipisicing elit.
+              </p>
+            </div>
+            <div className="hebrew" dir="rtl">
+              <h3 className="text-xl font-semibold mb-3">Hebrew Text</h3>
+              <h1 className="text-4xl font-extrabold mb-2">כותרת ראשית</h1>
+              <h2 className="text-3xl font-bold mb-2">כותרת משנית</h2>
+              <h3 className="text-2xl font-semibold mb-2">כותרת קטנה</h3>
+              <p className="text-base text-gray-700">
+                זהו טקסט בעברית לבדיקת התצוגה והפונטים. מערכת חברותא בכל זמן.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Color Test */}
+        <section className="card space-y-4">
+          <h2 className="text-2xl font-bold text-gray-800">
+            Brand Colors Test
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-[#FA7D00] rounded-2xl mx-auto mb-2"></div>
+              <p className="text-sm font-medium">Primary Orange</p>
+              <p className="text-xs text-gray-600">#FA7D00</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-[#1972E6] rounded-2xl mx-auto mb-2"></div>
+              <p className="text-sm font-medium">Primary Blue</p>
+              <p className="text-xs text-gray-600">#1972E6</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-[#43E97B] rounded-2xl mx-auto mb-2"></div>
+              <p className="text-sm font-medium">Success Green</p>
+              <p className="text-xs text-gray-600">#43E97B</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-[#FF6B6B] rounded-2xl mx-auto mb-2"></div>
+              <p className="text-sm font-medium">Error Red</p>
+              <p className="text-xs text-gray-600">#FF6B6B</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Gradient Test */}
+        <section className="card space-y-4">
+          <h2 className="text-2xl font-bold text-gray-800">Gradients Test</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="h-24 gradient-primary rounded-2xl flex items-center justify-center">
+              <span className="text-white font-semibold">Primary Gradient</span>
+            </div>
+            <div className="h-24 gradient-secondary rounded-2xl flex items-center justify-center">
+              <span className="text-white font-semibold">
+                Secondary Gradient
+              </span>
+            </div>
+            <div className="h-24 gradient-success rounded-2xl flex items-center justify-center">
+              <span className="text-white font-semibold">Success Gradient</span>
+            </div>
+          </div>
+        </section>
+
+        {/* Component Test */}
+        <section className="card space-y-4">
+          <h2 className="text-2xl font-bold text-gray-800">Components Test</h2>
+          <div className="space-y-6">
+            {/* Buttons */}
+            <div>
+              <h3 className="text-lg font-semibold mb-3">Buttons</h3>
+              <div className="flex flex-wrap gap-4">
+                <button className="btn bg-[#1972E6] text-white hover:bg-[#0F5DBD] interactive">
+                  <i className="fas fa-play mr-2"></i>
+                  Primary Button
+                </button>
+                <button className="btn bg-[#FA7D00] text-white hover:bg-[#E06A00] interactive">
+                  <i className="fas fa-plus mr-2"></i>
+                  Secondary Button
+                </button>
+                <button className="btn bg-gray-100 text-gray-800 hover:bg-gray-200 interactive">
+                  <i className="fas fa-cog mr-2"></i>
+                  Neutral Button
+                </button>
+              </div>
+            </div>
+
+            {/* Form Elements */}
+            <div>
+              <h3 className="text-lg font-semibold mb-3">Form Elements</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  className="input"
+                />
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="input"
+                />
+              </div>
+            </div>
+
+            {/* Cards */}
+            <div>
+              <h3 className="text-lg font-semibold mb-3">Cards</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="card interactive cursor-pointer">
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-[#1972E6] rounded-xl mx-auto mb-3 flex items-center justify-center">
+                      <i className="fas fa-users text-white"></i>
+                    </div>
+                    <h4 className="font-semibold text-gray-800">
+                      Find Chavrusa
+                    </h4>
+                    <p className="text-sm text-gray-600 mt-1">
+                      Discover study partners
+                    </p>
+                  </div>
+                </div>
+
+                <div className="card interactive cursor-pointer">
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-[#FA7D00] rounded-xl mx-auto mb-3 flex items-center justify-center">
+                      <i className="fas fa-book-open text-white"></i>
+                    </div>
+                    <h4 className="font-semibold text-gray-800">
+                      Torah Library
+                    </h4>
+                    <p className="text-sm text-gray-600 mt-1">
+                      Explore texts & topics
+                    </p>
+                  </div>
+                </div>
+
+                <div className="card interactive cursor-pointer">
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-[#43E97B] rounded-xl mx-auto mb-3 flex items-center justify-center">
+                      <i className="fas fa-chart-line text-white"></i>
+                    </div>
+                    <h4 className="font-semibold text-gray-800">My Progress</h4>
+                    <p className="text-sm text-gray-600 mt-1">
+                      Track learning journey
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Animation Test */}
+        <section className="card space-y-4">
+          <h2 className="text-2xl font-bold text-gray-800">Animations Test</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="card text-center animate-fade-in">
+              <div className="w-8 h-8 bg-blue-500 rounded-full mx-auto mb-2"></div>
+              <p className="text-sm">Fade In</p>
+            </div>
+            <div className="card text-center animate-slide-up">
+              <div className="w-8 h-8 bg-green-500 rounded-full mx-auto mb-2"></div>
+              <p className="text-sm">Slide Up</p>
+            </div>
+            <div className="card text-center animate-scale-in">
+              <div className="w-8 h-8 bg-purple-500 rounded-full mx-auto mb-2"></div>
+              <p className="text-sm">Scale In</p>
+            </div>
+            <div className="card text-center animate-float">
+              <div className="w-8 h-8 bg-orange-500 rounded-full mx-auto mb-2"></div>
+              <p className="text-sm">Float</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Loading States Test */}
+        <section className="card space-y-4">
+          <h2 className="text-2xl font-bold text-gray-800">
+            Loading States Test
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="space-y-3">
+              <div className="skeleton h-4 w-3/4"></div>
+              <div className="skeleton h-4 w-1/2"></div>
+              <div className="skeleton h-4 w-2/3"></div>
+            </div>
+            <div className="flex justify-center items-center h-24">
+              <div className="loading-spinner"></div>
+            </div>
+            <div className="flex justify-center items-center h-24">
+              <div className="animate-pulse">
+                <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Accessibility Test */}
+        <section className="card space-y-4">
+          <h2 className="text-2xl font-bold text-gray-800">
+            Accessibility Test
+          </h2>
+          <div className="space-y-4">
+            <button
+              className="btn bg-blue-600 text-white focus-visible"
+              tabIndex={0}
+            >
+              Focus Test (Tab to me)
+            </button>
+            <div className="sr-only">This text is screen reader only</div>
+            <p className="text-sm text-gray-600">
+              Tab through this page to test focus management and keyboard
+              navigation.
+            </p>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      {/* Footer */}
+      <footer className="bg-white border-t border-gray-200 p-6 mt-12">
+        <div className="container mx-auto text-center">
+          <p className="text-gray-600">
+            ✅ If you can see all styles correctly, globals.css is working
+            properly!
+          </p>
+        </div>
       </footer>
     </div>
   );
